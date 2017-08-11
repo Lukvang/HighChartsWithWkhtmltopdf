@@ -1,4 +1,4 @@
-package main;
+package JS;
 
 import java.io.BufferedWriter;
 import java.io.File;
