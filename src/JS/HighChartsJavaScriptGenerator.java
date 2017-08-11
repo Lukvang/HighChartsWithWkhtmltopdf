@@ -1,7 +1,14 @@
 package JS;
 
+/*
+ * 
+ * HighChartsJavaScriptGenerator
+ * 
+ * This enum holds the functions and order to generate javascript file.
+ * Each enum generates a piece of the javascript
+ * 
+ */
 public enum HighChartsJavaScriptGenerator {
-	
 
 	ADD_BEGINNING_BRACKET() {
 		@Override
@@ -27,19 +34,19 @@ public enum HighChartsJavaScriptGenerator {
 			return "yAxis: { title: {text: '" + title + "' }},";
 		}
 	},
-	ADD_PLOT_OPTINS(){
+	ADD_PLOT_OPTINS() {
 		@Override
-		public String generate(String pointStart){
+		public String generate(String pointStart) {
 			return "plotOptions: { series: { pointStart: " + pointStart + " , animation: false } },";
 		}
 	},
-	ADD_SERIES(){
-		@Override 
-		public String generate(String JSON){
+	ADD_SERIES() {
+		@Override
+		public String generate(String JSON) {
 			return " series: [ " + JSON + "]";
 		}
 	},
-	ADD_ENDING_BRACKET(){
+	ADD_ENDING_BRACKET() {
 		@Override
 		public String generate(String id) {
 			return "});";

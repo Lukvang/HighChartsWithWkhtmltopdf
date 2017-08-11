@@ -1,4 +1,4 @@
-package JS;
+package main;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -64,13 +64,12 @@ public class Main {
 
 			}
 		}
-		
+
 		String input = "/Users/lukevang/Documents/WebScrappas/Javascript/home.html";
 		String output = "/Users/lukevang/Documents/WebScrappas/Javascript/home.pdf";
-		
+
 		String[] command = { "/usr/local/bin/wkhtmltopdf", "--disable-smart-shrinking", "-d", "1200", "-B", "0", "-L",
-				"0", "-R", "0", "-T", "0", "-O", "landscape",
-				input, output };
+				"0", "-R", "0", "-T", "0", "-O", "landscape", input, output };
 		try {
 			System.out.println("**************CREATING PDF***************");
 			ProcessBuilder processBuilder = new ProcessBuilder();
